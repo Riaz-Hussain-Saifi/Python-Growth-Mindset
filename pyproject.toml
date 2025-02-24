@@ -1,0 +1,46 @@
+[project]
+name = "growth-mindset"
+version = "0.1.0"
+description = "A powerful file conversion utility with batch processing capabilities"
+authors = [
+    {name = "Riaz Hussain", email = "your.email@example.com"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["file conversion", "streamlit", "utility", "batch processing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "streamlit>=1.24.0",
+    "pandas>=1.5.0",
+    "numpy>=1.21.0",
+    "Pillow>=9.0.0",
+    "python-docx>=0.8", 
+    "PyPDF2==3.0.1",
+    "reportlab>=4.1.0",  
+    "markdown==3.5.2",
+    "xlsxwriter>=3.0.0",
+    "docx2txt==0.15.0",
+]
+
+[project.URLs]
+Homepage = "https://github.com/Riaz-Hussain-Saifi/Python-Growth-Mindset"
+Repository = "https://github.com/Riaz-Hussain-Saifi/Python-Growth-Mindset.git"
+Issues = "https://github.com/Riaz-Hussain-Saifi/Python-Growth-Mindset/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.poetry.scripts]
+main = "main:main"
