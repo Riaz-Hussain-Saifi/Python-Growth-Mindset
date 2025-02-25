@@ -18,23 +18,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Perform import checks AFTER st.set_page_config()
-try:
-    import docx  # For python-docx
-except ImportError:
-    st.error("python-docx module not found. Please install it using: pip install python-docx>=0.8.11")
-
-try:
-    import PyPDF2
-except ImportError:
-    st.error("PyPDF2 module not found. Please install it using: pip install PyPDF2==3.0.1")
-
-try:
-    from reportlab.pdfgen import canvas
-    from reportlab.lib.pagesizes import letter
-except ImportError:
-    st.error("reportlab module not found. Please install it using: pip install reportlab>=4.2.0")
-
 def main():
     # Enhanced CSS for responsiveness, beauty, animations, and vibrant colors
     st.markdown("""
