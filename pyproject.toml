@@ -1,17 +1,46 @@
 [project]
 name = "growth-mindset"
 version = "0.1.0"
-description = "Add your description here"
+description = "A powerful file conversion utility with batch processing capabilities"
+authors = [
+    {name = "Riaz Hussain", email = "infosaifideveloper@gmail.com"},
+]
 readme = "README.md"
 requires-python = ">=3.12"
+license = {file = "LICENSE"}
+keywords = ["file conversion", "streamlit", "utility", "batch processing", "text extraction"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = [
-    "docx2txt>=0.8",
-    "markdown>=3.7",
-    "numpy>=2.2.3",
-    "pandas>=2.2.3",
-    "pillow>=11.1.0",
-    "pypdf>=5.3.0",
-    "reportlab>=4.3.1",
     "streamlit>=1.42.2",
+    "pandas>=2.2.3",
+    "numpy>=2.2.3",
+    "pillow>=11.1.0",
+    "python-docx>=0.8.11",
+    "PyPDF2==3.0.1",
+    "reportlab>=4.3.1",
+    "markdown>=3.7",
     "xlsxwriter>=3.2.2",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Riaz-Hussain-Saifi/Python-Growth-Mindset"
+Repository = "https://github.com/Riaz-Hussain-Saifi/Python-Growth-Mindset.git"
+"Bug Tracker" = "https://github.com/Riaz-Hussain-Saifi/Python-Growth-Mindset/issues"
+"Developer LinkedIn" = "https://www.linkedin.com/in/riaz-hussain-saifi"
+"Developer GitHub" = "https://github.com/Riaz-Hussain-Saifi"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatchling]
+# Optional: Specify additional build configurations if needed
