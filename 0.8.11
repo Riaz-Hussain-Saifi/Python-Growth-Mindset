@@ -1,3 +1,0 @@
-Requirement already satisfied: python-docx in c:\python312\lib\site-packages (1.1.2)
-Requirement already satisfied: lxml>=3.1.0 in c:\python312\lib\site-packages (from python-docx) (5.3.1)
-Requirement already satisfied: typing-extensions>=4.9.0 in c:\python312\lib\site-packages (from python-docx) (4.12.2)
