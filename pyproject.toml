@@ -3,7 +3,7 @@ name = "growth-mindset"
 version = "0.1.0"
 description = "A powerful file conversion utility with batch processing capabilities"
 authors = [
-    {name = "Riaz Hussain", email = "your.email@example.com"},
+    {name = "Riaz Hussain", email = "infosaifideveloper@gmail.com"},
 ]
 readme = "README.md"
 requires-python = ">=3.8"
@@ -25,12 +25,11 @@ dependencies = [
     "pandas>=1.5.0",
     "numpy>=1.21.0",
     "Pillow>=9.0.0",
-    "python-docx>=0.8", 
+    "docx2txt==0.15.0",
     "PyPDF2==3.0.1",
-    "reportlab>=4.1.0",  
+    "reportlab>=4.1.0",
     "markdown==3.5.2",
     "xlsxwriter>=3.0.0",
-    "docx2txt==0.15.0",
 ]
 
 [project.URLs]

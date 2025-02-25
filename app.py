@@ -310,7 +310,7 @@ def convert_data_file(uploaded_file, file_extension):
                 
                 if st.button("Generate Chart"):
                     # Ensure data is numeric and properly formatted for Altair
-                    if df[y_col].dtype in ['float64', 'int64']:
+                    if pd.api.types.is_numeric_dtype(df[y_col]):
                         chart_data = df[[x_col, y_col]].dropna()
                         if chart_type == "Bar Chart":
                             st.bar_chart(chart_data.set_index(x_col)[y_col])
@@ -376,10 +376,11 @@ def convert_image_file(uploaded_file, file_extension):
         
         if to_pdf:
             # Create a temporary file path for reportlab compatibility
-            temp_path = "temp_image.jpg"
-            if image.mode != 'RGB':
-                image = image.convert('RGB')
-            image.save(temp_path, format='JPEG', quality=95)
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as temp_file:
+                temp_path = temp_file.name
+                if image.mode != 'RGB':
+                    image = image.convert('RGB')
+                image.save(temp_path, format='JPEG', quality=95)
             
             buf = io.BytesIO()
             pdf = canvas.Canvas(buf, pagesize=letter)
