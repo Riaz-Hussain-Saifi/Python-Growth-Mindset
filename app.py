@@ -375,7 +375,8 @@ def convert_image_file(uploaded_file, file_extension):
             download_button(jpg_data, "converted_image.jpg", "image/jpeg")
         
         if to_pdf:
-            # Create a temporary file path for reportlab compatibility
+            # Use tempfile for a temporary file path compatible with reportlab
+            import tempfile
             with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as temp_file:
                 temp_path = temp_file.name
                 if image.mode != 'RGB':
