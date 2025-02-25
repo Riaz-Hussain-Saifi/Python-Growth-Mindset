@@ -8,6 +8,7 @@ import io
 import markdown
 import zipfile
 import textwrap
+import json
 try:
     import docx2txt
 except ImportError:
